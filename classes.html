@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>EXPLORE THE PLANETS🌌</h1>
+    <button onclick="showfacts()">SHOW FACTS</button>
+    <DIV id="card1"></DIV>
+    <DIV id="card2"></DIV>
+    <DIV id="card3"></DIV>
+    <script>
+        class planet{
+            constructor (name,fact){
+                this.name=name;
+                this.fact=fact;
+            }
+            describe(){
+                return this.name+" : "+ this.fact+"👨🏻‍🚀";
+            }
+        }
+        function showfacts(){
+            let p1=new planet("earth","only planet with living organisms");
+             let p2 = new planet("neptune", "its the coldest planet");
+              let p3 = new planet("venus", "its the hottest planet  in solar system");
+              document.getElementById("card1").innerHTML = "<div class='card'><div class='planet'>" + p1.name + "</div><div class='fact'>" + p1.describe() + "</div></div>";
+            document.getElementById("card2").innerHTML = "<div class='card'><div class='planet'>" + p2.name + "</div><div class='fact'>" + p2.describe() + "</div></div>";
+            document.getElementById("card3").innerHTML = "<div class='card'><div class='planet'>" + p3.name + "</div><div class='fact'>" + p3.describe() + "</div></div>";
+        }
+        
+    </script>
+</body>
+</html>
